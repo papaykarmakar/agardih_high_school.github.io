@@ -1,0 +1,16 @@
+agardih-high-school-static/
+├── index.html
+├── curriculum.html
+├── subjects.html
+├── academic-calendar.html
+├── admission-procedure.html
+├── download-form.html
+├── fee-structure.html
+├── teaching-staff.html
+├── nonteaching-staff.html
+├── notices.html
+├── style.css
+├── script.js
+└── assets/
+    ├── README.txt  (where to put your logo & form)
+    └── (place logo.png and admission-form.pdf here)
