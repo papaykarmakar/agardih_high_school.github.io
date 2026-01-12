@@ -145,5 +145,30 @@ h1, h2 { color: #0b1324; }
 /* Responsive */
 @media (max-width: 640px) {
   .navbar { justify-content: flex-start; }
+
+
+/* Image Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
   .menu { min-width: 180px; }
 }
