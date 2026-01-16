@@ -17,10 +17,13 @@ document.getElementById("leaveForm").addEventListener("submit", function (e) {
     let y = 20; // starting y position
 
     doc.setFontSize(12);
-    doc.text("To the Office of the Sub-Inspector of Schools", 105, y, null, null, "center");
+    doc.text("To the Headmaster ", 105, y, null, null, "center");
     y += 10;
     doc.setFontSize(12);
-    doc.text("Adra Circle, Kashipur, Purulia", 105, y, null, null, "center");
+    doc.text("Agardih High School (H.S.) ", 105, y, null, null, "center");
+    y += 10;
+    doc.setFontSize(12);
+    doc.text("Agardih, Kashipur, Purulia", 105, y, null, null, "center");
 
     y += 20;
     doc.text("Subject: Application for Leave", 20, y);
@@ -49,6 +52,7 @@ ${name}
 
     doc.save(`${name}_Leave_Application.pdf`);
 });
+
 
 
 
