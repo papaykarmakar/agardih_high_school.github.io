@@ -33,11 +33,13 @@ document.getElementById("leaveForm").addEventListener("submit", function (e) {
     y += 10;
     let body = `Respected _______,
 
-I, ${name}, working as ${designation} at ${school}, request leave from
+with due respect and honour, I, ${name} (${designation}), beg to state that, due to ${reason}, I am unable to attend the school from ${fromDate} to ${toDate}.
 
-${fromDate} to ${toDate} due to ${reason}.
+I therefore request you to kindly grant me ${leave_type} leave for the mentioned period. 
 
-Kindly grant me ${leave_type} leave for the mentioned period.
+Your kind consideration is highly solicited.
+
+
 
 Thanking you,
 
@@ -46,6 +48,7 @@ Yours faithfully,
 
 
 ${name} 
+${school}
 (Mobile No: ${mobile})`;
 
     doc.setFontSize(12);
@@ -54,5 +57,6 @@ ${name}
 
     doc.save(`${name}_Leave_Application.pdf`);
 });
+
 
 
