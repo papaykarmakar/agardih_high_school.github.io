@@ -18,10 +18,10 @@ document.getElementById("leaveForm").addEventListener("submit", function (e) {
 
     doc.setFontSize(12);
     doc.text("To the Headmaster ", 105, y, null, null, "center");
-    y += 10;
+    y += 5;
     doc.setFontSize(12);
     doc.text("Agardih High School (H.S.) ", 105, y, null, null, "center");
-    y += 10;
+    y += 5;
     doc.setFontSize(12);
     doc.text("Agardih, Kashipur, Purulia", 105, y, null, null, "center");
 
@@ -56,6 +56,7 @@ ${name}
 
     doc.save(`${name}_Leave_Application.pdf`);
 });
+
 
 
 
