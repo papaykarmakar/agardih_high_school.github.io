@@ -4,7 +4,7 @@ document.getElementById("leaveForm").addEventListener("submit", function (e) {
     const { jsPDF } = window.jspdf; // Access jsPDF
 
     const name = document.getElementById("name").value;
-    const school = document.getElementById("school").value;
+    // const school = document.getElementById("school").value;
     const designation = document.getElementById("designation").value;
     const mobile = document.getElementById("mobile").value;
     const fromDate = document.getElementById("fromDate").value;
@@ -49,6 +49,7 @@ ${name}
 
     doc.save(`${name}_Leave_Application.pdf`);
 });
+
 
 
 
