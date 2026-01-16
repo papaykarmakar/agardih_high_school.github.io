@@ -143,7 +143,7 @@ h1, h2 { color: #0b1324; }
 }
 
 /* Responsive */
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .navbar { justify-content: flex-start; }
 
 
