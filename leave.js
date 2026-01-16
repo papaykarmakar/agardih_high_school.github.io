@@ -28,7 +28,7 @@ document.getElementById("leaveForm").addEventListener("submit", function (e) {
     y += 10;
     let body = `Respected Madam,
 
-I, ${name}, working as ${designation} at ${school}, request leave from
+I, ${name}, working as ${designation} at Agardih High School (H.S.), request leave from
 
 ${fromDate} to ${toDate} due to ${reason}.
 
@@ -49,5 +49,6 @@ ${name}
 
     doc.save(`${name}_Leave_Application.pdf`);
 });
+
 
 
