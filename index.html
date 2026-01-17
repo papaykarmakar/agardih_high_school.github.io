@@ -4,6 +4,243 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home - Agardih High School (H.S.)</title>
+  <style> 
+    /* MAIN LAYOUT */
+      .container {
+        display: flex;
+        gap: 20px;
+        padding: 25px;
+        align-items: flex-start;
+      }
+
+      /* COMMON CARD STYLE */
+      .notice-box,
+      .main,
+      .right-panel {
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      /* LEFT NOTICE */
+      .notice-box {
+        width: 20%;
+      }
+
+      .notice-box h3 {
+        margin: 0;
+        background: #0055a5;
+        color: #fff;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 6px 6px 0 0;
+      }
+
+      .notice-content {
+        height: 260px;
+        padding: 12px;
+        overflow: hidden;
+      }
+
+      .notice-content a {
+        display: block;
+        margin-bottom: 10px;
+        color: #003366;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .notice-content a:hover {
+        text-decoration: underline;
+      }
+
+      /* CENTER CONTENT */
+      .main {
+        width: 60%;
+        padding: 20px;
+      }
+
+      .main p {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      /* SLIDER */
+      .middle-section {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .carousel {
+        position: relative;
+        width: 100%;
+        height: 380px;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: inset 0 0 0 1px #ddd;
+      }
+
+      .slide {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .slide.active {
+        display: block;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Slider Buttons */
+      .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 10px 14px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 50%;
+      }
+
+      .prev {
+        left: 15px;
+      }
+
+      .next {
+        right: 15px;
+      }
+
+      /* Thumbnails */
+      .thumbnails {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .thumbnails img {
+        width: 90px;
+        height: 55px;
+        object-fit: cover;
+        opacity: 0.6;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .thumbnails img.active {
+        opacity: 1;
+        outline: 2px solid #0055a5;
+      }
+
+      /* RIGHT PANEL */
+      .right-panel {
+        width: 20%;
+      }
+
+      .right-panel h3 {
+        margin: 0;
+        background: #0055a5;
+        color: #fff;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 6px 6px 0 0;
+      }
+
+      .right-marquee {
+        height: 260px;
+        padding: 12px;
+        overflow: hidden;
+      }
+
+      .right-marquee a {
+        display: block;
+        margin-bottom: 10px;
+        color: #003366;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      .right-marquee a:hover {
+        text-decoration: underline;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+        position: bottom;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 15px;
+        }
+
+        .notice-box,
+        .main,
+        .right-panel {
+          width: 100%;
+        }
+
+        .carousel {
+          height: 240px;
+        }
+      }
+
+      /* VERTICAL SCROLL (MARQUEE REPLACEMENT) */
+      .vertical-scroll {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .scroll-content {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        animation: scrollUp 18s linear infinite;
+      }
+
+      .scroll-content li {
+        margin-bottom: 10px;
+      }
+
+      /* Pause animation on hover */
+      .vertical-scroll:hover .scroll-content {
+        animation-play-state: paused;
+      }
+
+      .page-wrapper {
+        flex: 1;
+      }
+
+      /* Keyframes */
+      @keyframes scrollUp {
+        0% {
+          transform: translateY(100%);
+        }
+
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+  
+  
+  
+  </style> 
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -64,37 +301,125 @@
 
     <main>
       
-  <div style="text-align:center">
-    <img src="assets/logo.jpg" alt="School Logo" style="max-width:140px; height:auto; display:block; margin: 0 auto 12px auto;">
-  </div>
-  <h1 style="text-align:center">About Agardih High School (H.S.)</h1>
-  <p class="lead" style="text-align:center;">
-    Established in 1949, <strong>Agardih High School (H.S.)</strong> is a co-educational institution under the West Bengal Council of Higher Secondary Education (WBCHSE).
-    The school has been serving the community for decades, nurturing young minds with knowledge, values, and discipline.
-  </p>
-  <p>
-    Guided by our motto <em>"Education for a sustainable development of society and country"</em>, we emphasize both academic excellence and character building,
-    preparing students for higher education and meaningful contributions to society.
-  </p>
-  <div class="card">
-    <h2>Subject Offered in Higher Secondary Class</h2>
-    <ul>
-      <li>Bangali</li>
-      <li>English</li>
-      <li>Geography</li>
-      <li>History</li>
-      <li>Philosophy</li>
-      <li>Sanskrit</li>
-      <li>Education</li>
-      <li>Computer Application</li>
-      <li>Environment</li>
-    </ul>
-  </div>
+
+      <header>
+        <h1>District Primary School Council, Purulia</h1>
+      </header>
+
+     
+
+      <!-- SLIDER -->
+      <!-- <div class="slider">
+        <img src="assets/images/banner1.jpg" alt="Banner" />
+    </div> -->
+
+      <!-- CONTENT -->
+      <div class="container">
+        <!-- NOTICE BOARD -->
+        <div class="notice-box">
+          <h3>Latest Notices</h3>
+          <div class="notice-content">
+            <div class="vertical-scroll">
+              <ul class="scroll-content">
+                <li><a href="#">📄 School Reopening Notice</a></li>
+                <li><a href="#">📄 Teachers Training Programme</a></li>
+                <li><a href="#">📄 Holiday List 2026</a></li>
+                <li><a href="#">📄 Mid-Day Meal Guidelines</a></li>
+                <li><a href="#">📄 Transfer Order Circular</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <!-- MAIN CONTENT -->
+        <div class="main">
+          <!-- Some content above slider -->
+          <p style="text-align: center; padding: 20px">
+            Welcome to the official website of DPSC Purulia
+          </p>
+
+          <!-- ========= MIDDLE SLIDER SECTION ========= -->
+          <div class="middle-section">
+            <div class="carousel">
+              <div class="slide active">
+                <img src="assets/images/slide1.jpg" alt="Slide 1" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/slide2.jpg" alt="Slide 2" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/slide3.jpg" alt="Slide 3" />
+              </div>
+              <div class="slide">
+                <img src="assets/images/slide4.jpg" alt="Slide 4" />
+              </div>
+
+              <div class="nav-btn prev" onclick="moveSlide(-1)">❮</div>
+              <div class="nav-btn next" onclick="moveSlide(1)">❯</div>
+            </div>
+
+            <div class="thumbnails">
+              <img
+                src="assets/images/slide1.jpg"
+                class="active"
+                onclick="showSlide(0)"
+              />
+              <img src="assets/images/slide2.jpg" onclick="showSlide(1)" />
+              <img src="assets/images/slide3.jpg" onclick="showSlide(2)" />
+              <img src="assets/images/slide4.jpg" onclick="showSlide(3)" />
+            </div>
+          </div>
+        </div>
+        <!-- ========= END SLIDER ========= -->
+
+        <div class="right-panel">
+          <h3>Important Updates</h3>
+
+          <div class="right-marquee">
+            <div class="vertical-scroll">
+              <ul class="scroll-content">
+                <li><a href="#">🔗 Online Transfer Portal</a></li>
+                <li><a href="#">🔗 Teacher Attendance System</a></li>
+                <li><a href="#">🔗 Scholarship Guidelines</a></li>
+                <li><a href="#">🔗 School Inspection Format</a></li>
+                <li><a href="#">🔗 Academic Circulars</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
 
     </main>
 
     <footer class="footer">© 2025 Agardih High School. All Rights Reserved. Contact: agardih2014@gmail.com</footer>
   </div>
+   <script>
+      let current = 0;
+      const slides = document.querySelectorAll(".slide");
+      const thumbs = document.querySelectorAll(".thumbnails img");
+
+      function showSlide(index) {
+        slides[current].classList.remove("active");
+        thumbs[current].classList.remove("active");
+
+        current = index;
+
+        slides[current].classList.add("active");
+        thumbs[current].classList.add("active");
+      }
+
+      function moveSlide(step) {
+        let index = current + step;
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        showSlide(index);
+      }
+
+      /* Auto slide */
+      setInterval(() => moveSlide(1), 5000);
+    </script>
   <script src="script.js"></script>
 </body>
 </html>
