@@ -12,6 +12,22 @@
         padding: 25px;
         align-items: flex-start;
       }
+body{
+              /* Set the background image */
+            background-image: url("assets/logo.jpg");
+
+            /* Control how the image repeats */
+            background-repeat: no-repeat; 
+
+            /* Ensure the image covers the whole background */
+            background-size: cover; 
+
+            /* Fix the image position so it doesn't scroll with content */
+            background-attachment: fixed;
+
+            /* Set a background color as a fallback if the image doesn't load */
+            background-color: #cccccc;
+}  
 
       /* COMMON CARD STYLE */
       .notice-box,
@@ -237,22 +253,7 @@
           transform: translateY(-100%);
         }
       }
-  body{
-              /* Set the background image */
-            background-image: url("assets/logo.jpg");
-
-            /* Control how the image repeats */
-            background-repeat: no-repeat; 
-
-            /* Ensure the image covers the whole background */
-            background-size: cover; 
-
-            /* Fix the image position so it doesn't scroll with content */
-            background-attachment: fixed;
-
-            /* Set a background color as a fallback if the image doesn't load */
-            background-color: #cccccc;
-}  
+  
   </style> 
   <link rel="stylesheet" href="style.css"/>
 </head>
