@@ -152,6 +152,20 @@ body {
         font-size: 20px;
         border-radius: 50%;
       }
+    .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #003366;
+}
+
+.logo {
+  height: 48px;          /* ideal header size */
+  width: auto;
+}
+
 
       .prev {
         left: 15px;
@@ -224,6 +238,16 @@ body {
         font-size: 14px;
         position: bottom;
       }
+    @media (max-width: 768px) {
+  .brand {
+    font-size: 16px;
+  }
+
+  .logo {
+    height: 38px;
+  }
+}
+
 
       /* RESPONSIVE */
       @media (max-width: 768px) {
@@ -287,7 +311,10 @@ body {
 <body>
   <div class="page">
     <header class="header">
-      <div class="brand">Agardih High School (H.S.)</div>
+      <div class="brand">
+  <img src="assets/logo.jpg" alt="Agardih High School Logo" class="logo">
+  <span>Agardih High School (H.S.)</span>
+      </div>
       <nav class="navbar" aria-label="Main navigation">
         <div class="navitem">
           <button type="button" aria-haspopup="true" aria-expanded="false">Home</button>
