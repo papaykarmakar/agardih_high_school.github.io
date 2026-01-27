@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Agardih High School (H.S.)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <div class="page">
+        <header class="header">
+            <div class="brand">Agardih High School (H.S.)</div>
+            <nav class="navbar" aria-label="Main navigation">
+                <div class="navitem">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Home</button>
+                    <div class="menu" role="menu">
+                        <a href="index.html">Home page</a>
+                    </div>
+                </div>
+                <div class="navitem">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Academics</button>
+                    <div class="menu" role="menu">
+                        <a href="curriculum.html">Curriculum</a>
+                        <a href="subjects.html">Subjects</a>
+                        <a href="academic-calendar.html">Academic Calendar</a>
+                    </div>
+                </div>
+                <div class="navitem">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Admissions</button>
+                    <div class="menu" role="menu">
+                        <a href="admission-procedure.html">Procedure</a>
+                        <a href="download-form.html">Download Form</a>
+                        <a href="fee-structure.html">Fee Structure</a>
+                    </div>
+                </div>
+                <div class="navitem">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Faculty</button>
+                    <div class="menu" role="menu">
+                        <a href="teaching-staff.html">Teaching Staff</a>
+                        <a href="nonteaching-staff.html">Non-teaching Staff</a>
+                    </div>
+                </div>
+                <div class="navitem">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Notices</button>
+                    <div class="menu" role="menu">
+                        <a href="notices.html">View All Notices</a>
+                    </div>
+                </div>
+                <div class="navitem">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Leave Application</button>
+                    <div class="menu" role="menu">
+                        <a href="leave_application.html">Apply for leave</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="noticebar">
+            <span>📣 22th-23th January, Saraswati Puja and Netaji Subhash Chandra Bose Birthday </span>
+            <span>📣 26th January, Republic Day</span>
+            <!-- <span>📣 Swami Vivekananda's Birth day 12th January 2026 (Holiday) </span>
+      <!-- <span>📣 Holiday: Durga Puja from 8th–15th Oct</span> --> -->
+        </div>
+
+<header>
+  <h2>Student Data Download Panel</h2>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<section class="downloads">
+
+  <h3>2022</h3>
+  <a href="students/2022/students_2022.xlsx" download>Download Student List</a>
+
+  <h3>2023</h3>
+  <a href="students/2023/students_2023.xlsx" download>Download Student List</a>
+
+  <h3>2024</h3>
+  <a href="students/2024/students_2024.xlsx" download>Download Student List</a>
+
+</section>
+
+        <footer class="footer">© 2025 Agardih High School. All Rights Reserved.</footer>
+    </div>
+    <!-- jsPDF library -->
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+
+</html>
