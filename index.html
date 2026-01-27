@@ -293,6 +293,93 @@ body {
       .page-wrapper {
         flex: 1;
       }
+    
+/* ===== NOTICE BAR ===== */
+.noticebar {
+  background: #facc15;
+  padding: 10px 16px;
+  font-weight: 600;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  width: min(1100px, 92%);
+  margin: 30px auto;
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-box {
+  width: 360px;
+  margin: 100px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e3a8a;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #162c6a;
+}
+
+#error {
+  color: crimson;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ===== DASHBOARD ===== */
+.downloads a {
+  display: block;
+  margin: 10px 0;
+  padding: 12px;
+  background: #e7f1ff;
+  color: #1e3a8a;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.downloads a:hover {
+  background: #1e3a8a;
+  color: white;
+}
 
       /* Keyframes */
       @keyframes scrollUp {
@@ -351,6 +438,12 @@ body {
             <a href="notices.html">View All Notices</a>
           </div>
         </div>
+        <div class="navitem">
+                    <button type="button" aria-haspopup="true" aria-expanded="false">Students Corner</button>
+                    <div class="menu" role="menu">
+                        <a href="login.html">Students Corner</a>
+                    </div>
+          </div>
          <div class="navitem">
           <button type="button" aria-haspopup="true" aria-expanded="false">Leave Application</button>
           <div class="menu" role="menu">
