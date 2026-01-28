@@ -3,7 +3,7 @@ function loginUser() {
     const pass = document.getElementById("password").value;
 
     // ✅ Change credentials here
-    if (user === "admin" && pass === "school@123") {
+    if (user === "19141010809" && pass === "Agardih@1949") {
         sessionStorage.setItem("loggedIn", "true");
         window.location.href = "dashboard.html";
     } else {
@@ -24,3 +24,4 @@ function logout() {
     sessionStorage.removeItem("loggedIn");
     window.location.href = "login.html";
 }
+
